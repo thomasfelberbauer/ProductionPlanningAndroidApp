@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    >
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/toolBarMac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.70"
+                    android:text="MACHINE 2"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    app:srcCompat="@mipmap/ic_clock"                      />
+                <Chronometer
+                    android:id="@+id/chronoGame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="30dp"
+
+                    />
+                <Space android:layout_weight="1"
+                    android:layout_height="match_parent"/>
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@mipmap/ic_launcher"                        />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+
+
+</android.support.v7.widget.Toolbar>

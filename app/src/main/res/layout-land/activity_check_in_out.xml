@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.production_planning_game.eps_game.LoginActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+         />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="50dp"
+                tools:context="com.production_planning_game.eps_game.LoginActivity">
+
+
+                <TextView
+                    android:id="@+id/currentTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Your production time :"
+                    android:textSize="30dp"
+                    android:layout_alignParentTop="true"
+                    />
+
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_toLeftOf="@+id/chronoProduction"
+                    android:layout_alignBottom="@+id/chronoProduction"
+                    app:srcCompat="@mipmap/ic_clock"                      />
+                <Chronometer
+                    android:id="@+id/chronoProduction"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="30dp"
+                    android:layout_below="@+id/currentTime"
+                    android:layout_marginTop="20dp"/>
+
+
+                <TextView
+                    android:id="@+id/orderProduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="..."
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+android:layout_above="@+id/checkInOutBtn"
+                    android:layout_marginBottom="50dp"/>
+
+                <TextView
+                    android:id="@+id/statusInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Waiting"
+                    android:textSize="30dp"
+                    android:layout_above="@+id/checkInOutBtn"
+                    android:visibility="gone"/>
+                <Button
+                    android:id="@+id/checkInOutBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="WAITING"
+                    android:textColor="@android:color/white"
+                    android:textSize="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="100dp"
+
+                    />
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="3dp"
+                android:layout_height="fill_parent"
+                android:background="#bbbbbb" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+
+                <TabHost
+                    android:id="@+id/tabby"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp" />
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/tab1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="WORKSTEP DESCRIPTION:"
+                                        android:gravity="center"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        app:srcCompat="@drawable/image_infooo_ws1" />
+                                    <TextView
+                                    android:id="@+id/editText4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:padding="10dp"
+                                    android:inputType="textMultiLine"
+                                    android:text="@string/cutting"/>
+                                </LinearLayout>
+                                </ScrollView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="WORKSTEP DESCRIPTION:"
+                                        android:gravity="center"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_gravity="center"
+
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/image_infooooo_ws2" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:padding="10dp"
+                                        android:inputType="textMultiLine"
+                                        android:text="@string/surface"/>
+                                    </LinearLayout>
+                                </ScrollView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="WORKSTEP DESCRIPTION:"
+                                        android:gravity="center"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_gravity="center"
+
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/image_infoooooooooooo_ws3" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:inputType="textMultiLine"
+                                        android:padding="10dp"
+
+                                        android:text="@string/paint"/>
+                                    </LinearLayout>
+                                </ScrollView>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/tab4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="WORKSTEP DESCRIPTION:"
+                                        android:gravity="center"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+
+                                        app:srcCompat="@drawable/image_infoooooooooooooo_ws4" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:inputType="textMultiLine"
+                                        android:padding="10dp"
+
+                                        android:text="@string/assembly"/>
+                                    </LinearLayout>
+                                </ScrollView>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/tab5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="WORKSTEP DESCRIPTION:"
+                                        android:gravity="center"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+
+                                        app:srcCompat="@drawable/image_info_ws5_600px" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:padding="10dp"
+
+                                        android:inputType="textMultiLine"
+                                        android:text="@string/finalass"/>
+                                    </LinearLayout>
+                                </ScrollView>
+
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </TabHost>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Tools needed:"
+                    android:layout_marginTop="50dp"
+                    android:textSize="30dp" />
+
+                <ImageView
+                    android:id="@+id/fotaca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="20dp" />
+            </LinearLayout>
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>
+
+

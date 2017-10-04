@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.production_planning_game.eps_game.LoginActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+         />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="50dp"
+                tools:context="com.production_planning_game.eps_game.LoginActivity">
+
+
+                <TextView
+                    android:id="@+id/currentTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Your production time :"
+                    android:textSize="30dp"
+                    android:layout_alignParentTop="true"
+                    />
+
+
+                <Chronometer
+                    android:id="@+id/chronoProduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="30dp"
+                    android:layout_below="@+id/currentTime"/>
+
+
+                <TextView
+                    android:id="@+id/orderProduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="..."
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    />
+
+                <TextView
+                    android:id="@+id/statusInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Waiting"
+                    android:textSize="30dp"
+                    android:layout_above="@+id/checkInOutBtn"/>
+                <Button
+                    android:id="@+id/checkInOutBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Check IN"
+                    android:textColor="@android:color/white"
+                    android:textSize="25dp"
+                    android:layout_alignParentBottom="true"
+
+                    />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+
+                <TabHost
+                    android:id="@+id/tabby"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp" />
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/tab1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                <TextView
+                                    android:id="@+id/editText4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:textSize="20dp"
+                                    android:padding="10dp"
+                                    android:inputType="textMultiLine"
+                                    android:text="@string/cutting"/>
+                                </ScrollView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:textSize="20dp"
+                                        android:padding="10dp"
+                                        android:inputType="textMultiLine"
+                                        android:text="@string/surface"/>
+                                </ScrollView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:textSize="20dp"
+                                        android:inputType="textMultiLine"
+                                        android:padding="10dp"
+
+                                        android:text="@string/paint"/>
+                                </ScrollView>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/tab4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:textSize="20dp"
+                                        android:inputType="textMultiLine"
+                                        android:padding="10dp"
+
+                                        android:text="@string/assembly"/>
+                                </ScrollView>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/tab5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:textSize="20dp"
+                                        android:padding="10dp"
+
+                                        android:inputType="textMultiLine"
+                                        android:text="@string/finalass"/>
+                                </ScrollView>
+
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </TabHost>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Tools needed:"
+                    android:layout_marginTop="50dp"
+                    android:textSize="30dp" />
+
+                <ImageView
+                    android:id="@+id/fotaca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="20dp" />
+            </LinearLayout>
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>
+
+
